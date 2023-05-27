@@ -9,6 +9,11 @@ body {
    background-color: #f6f8fc;
 }
 
+a {
+   text-decoration: none;
+   color: #fff;
+}
+
 .content {
    width: 100vw;
    height: 100vh;
@@ -16,7 +21,68 @@ body {
    background-color: #fff;
 }
 
+.content header {
+   background-color: #f33c2c;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   border-radius: 10px;
+}
+
+.content header h1 {
+   font-family: 'Pokemon Solid', sans-serif;
+   color: #e7bd0f;
+   font-size: 2.5rem;
+   line-height: 5rem;
+   text-shadow: #2c5da4 0.1rem 0.1rem 0.2rem;
+   filter: brightness(1.1);
+}
+
+.content header .title {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.content header .title,
+.content header #change-theme-button {
+   margin: 20px;
+}
+
+.content header .title .logo,
+.content header .button-image {
+   width: 30px;
+   height: 30px;
+}
+
+.content header .button-image {
+   transition: 0.2s ease-in-out;
+}
+
+.content header #change-theme-button {
+   background: none;
+   border: none;
+}
+
+.content header .logo:hover,
+.content header .button-image:hover {
+   transform: scale(1.05);
+   cursor: pointer;
+}
+
+@media screen and (min-width: 350px) and (max-width: 576px) {
+   body.dark-mode main {
+      background-color: #2b2b2b;
+   }
+}
+
 @media screen and (min-width: 992px) {
+   body.dark-mode {
+      background-color: #212121;
+      color: #f5f5f5;
+   }
+
    .content {
       max-width: 992px;
       height: auto;
